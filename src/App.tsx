@@ -1,20 +1,17 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Nav from "./components/Nav";
+import photo from "./assets/images/photo.jpg";
 
 function App() {
   return (
-    <div>
-      <header>
-        <img src={logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Nav />
+      {/* <div className="blob-container">
+        <img src={photo} alt="Centered Image" className="blob-image" />
+      </div> */}
+    </>
   );
 }
 
