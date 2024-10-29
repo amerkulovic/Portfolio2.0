@@ -1,10 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 * {
   background-color: #1c1c1c;
   color: #f0f0f0;
+  font-family: "Nunito", sans-serif;
+}
+
+:root {
+  --bg-color: #1c1c1c;
+  --typewriterSpeed: 2.2s;
+  --typewriterCharacters: 125;
 }
 .blob-container {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid #f0f0f0;
@@ -14,6 +22,43 @@
 .blob-image {
   width: 100%;
   height: 100%;
+}
+.type-writer {
+  position: relative;
+  position: relative;
+  width: max-content;
+}
+
+.type-writer::before,
+.type-writer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.type-writer::before {
+  background: var(--bg-color);
+  animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+.type-writer::after {
+  width: 0.125em;
+  animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards, blink 750ms steps(var(--typewriterCharacters));
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
 }
 
 @keyframes blobAnimation {
@@ -36,5 +81,11 @@
   100% {
     border-radius: 50% 50% 45% 55% / 60% 40% 60% 40%;
     transform: translate(0, 0);
+  }
+}
+
+@media screen and (max-width: 863px) {
+  .type-writer::after {
+    opacity: 0;
   }
 }
