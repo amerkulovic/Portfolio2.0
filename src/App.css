@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 * {
-  background-color: #1c1c1c;
   color: #f0f0f0;
   font-family: "Nunito", sans-serif;
 }
@@ -16,7 +15,7 @@
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid #f0f0f0;
-  animation: blobAnimation 3s infinite ease-in-out;
+  animation: blobAnimation 5s infinite ease-in-out;
 }
 
 .blob-image {
@@ -87,5 +86,8 @@
 @media screen and (max-width: 863px) {
   .type-writer::after {
     opacity: 0;
+  }
+  .blob-container {
+    display: none;
   }
 }
