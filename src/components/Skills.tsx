@@ -11,7 +11,7 @@ const Skills = () => {
     setSelectedSkillset(skillset);
   }
   return (
-    <div className="bg-[#6b21a8] flex flex-col items-center">
+    <div id="about" className="bg-[#6b21a8] flex flex-col items-center">
       <h1 className="text-5xl font-bold text-center">Skills</h1>
       <section className="flex p-5 rounded-lg w-fit">
         <button className={`p-5 rounded-l-lg ${selectedSkillset === "front-end" ? "bg-[#30124e]" : "bg-[#4d177a]"}`} value="front-end" onClick={(e) => selectSkills((e.target as HTMLButtonElement).value)}>

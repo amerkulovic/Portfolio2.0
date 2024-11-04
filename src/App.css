@@ -2,6 +2,7 @@
 * {
   color: #f0f0f0;
   font-family: "Nunito", sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
