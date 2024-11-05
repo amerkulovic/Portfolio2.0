@@ -70,7 +70,7 @@ const Skills = () => {
       <button onClick={scrollLeft} className="absolute left-2 top-[255px] transform -translate-y-1/2 text-5xl text-white p-2 z-10">
         ◀
       </button>
-      <div ref={scrollContainerRef} className="w-full overflow-hidden touch-pan-y flex justify-center">
+      <div ref={scrollContainerRef} className="w-full overflow-hidden touch-pan-y flex justify-center h-[300px]">
         <div className="inline-flex space-x-4">
           {displayedSkills.map((skill, index) => (
             <Card key={skill.title} title={skill.title} description={skill.description} isFocused={index === focusedIndex} isNearFocus={Math.abs(index - focusedIndex) === 1} isFarFromFocus={Math.abs(index - focusedIndex) > 1} />
