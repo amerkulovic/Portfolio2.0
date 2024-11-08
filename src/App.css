@@ -24,84 +24,82 @@
   height: 100%;
 }
 
-.work-picture {
-  position: relative;
-  width: 425px;
-  height: 315px;
-  border: 3px solid #fefbec;
-  margin: 10px;
-  transition: all ease-in 0.2s;
-}
-
-.work-picture:hover {
-  filter: blur(2px) brightness(60%);
-  box-shadow: 0 0 16px #f97444;
-}
-
-.container:hover .picture-text {
-  opacity: 1;
-}
-.picture-text:hover ~ .work-picture {
-  filter: blur(2px) brightness(60%);
-  box-shadow: 0 0 16px #f97444;
-}
-
-.container:hover .github-text {
-  opacity: 1;
-}
-
-.container:hover .link-text {
-  opacity: 1;
-}
-
 .container {
   position: relative;
   text-align: center;
   color: white;
+  border-radius: 15px;
 }
+
+.work-picture {
+  position: relative;
+  width: 425px;
+  height: 315px;
+  border: 2px solid #0a0a09;
+  margin: 10px;
+  transition: all ease-in 0.2s;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.work-picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+.work-picture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to bottom, rgba(124, 28, 203, 0.8), rgba(19, 4, 32, 0.454));
+  transition: height 0.4s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.container:hover .work-picture::before {
+  height: 100%;
+}
+
 .container:hover .work-picture {
-  filter: blur(2px) brightness(60%);
-  box-shadow: 0 0 16px #f97444;
+  box-shadow: 0 0 16px black;
 }
 
-.picture-text {
-  font-size: 25px;
-  font-weight: bold;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-}
-
-.github-text {
-  font-size: 25px;
-  font-weight: bold;
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-}
-
+.picture-text,
+.github-text,
 .link-text {
   font-size: 25px;
   font-weight: bold;
   position: absolute;
-  top: 50%;
-  left: 60%;
   transform: translate(-50%, -50%);
   opacity: 0;
+  transition: opacity 0.2s ease-in, transform 0.3s ease-out;
+  pointer-events: auto;
+  z-index: 3;
 }
 
-.picture-text:hover {
+.container:hover .picture-text,
+.container:hover .github-text,
+.container:hover .link-text {
   opacity: 1;
+  transform: translate(-50%, -70%);
 }
-.github-text:hover {
-  opacity: 1;
+
+.picture-text {
+  top: 30%;
+  left: 50%;
 }
-.link-text:hover {
-  opacity: 1;
+.github-text {
+  top: 50%;
+  left: 40%;
+}
+.link-text {
+  top: 50%;
+  left: 60%;
 }
 
 .type-writer {
