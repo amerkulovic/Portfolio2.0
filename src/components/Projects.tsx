@@ -23,7 +23,7 @@ const projects: ProjectObject[] = [
 ];
 const Projects = () => {
   return (
-    <div className="bg-gradient-to-b from-[#6b21a8] to-[#1c1c1c] via-[#1c1c1c]">
+    <div id="projects" className="bg-gradient-to-b from-[#6b21a8] to-[#1c1c1c] via-[#1c1c1c]">
       <h1 className="text-5xl font-bold text-center">Projects</h1>
       <div className="] py-40 flex flex-wrap justify-center">
         {projects.map(({ title, githubLink, websiteLink, image }: ProjectObject) => (

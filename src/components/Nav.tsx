@@ -8,8 +8,12 @@ const Nav = () => {
         <li className="px-4">
           <a href="#about">About</a>
         </li>
-        <li className="px-4">Skills</li>
-        <li className="px-4">Projects</li>
+        <li className="px-4">
+          <a href="#skills">Skills</a>
+        </li>
+        <li className="px-4">
+          <a href="#projects">Projects</a>
+        </li>
         <li className="pl-4 mr-10">Contact</li>
       </ul>
     </div>
