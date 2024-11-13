@@ -2,7 +2,7 @@ import githubLogo from "../assets/images/github-white.png";
 
 const Footer = () => {
   return (
-    <div className="bg-black flex justify-between py-5">
+    <div className="bg-black flex justify-between py-12 px-2">
       <div className="text-5xl font-bold">
         <span>&lt;</span>Amer <span>/&gt;</span>
       </div>
