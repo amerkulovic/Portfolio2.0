@@ -17,6 +17,12 @@ textarea:-webkit-autofill {
   -webkit-text-fill-color: white;
 }
 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #1c1c1c inset;
+  -webkit-text-fill-color: white;
+}
+
 input:focus + label,
 input:not(:placeholder-shown) + label,
 textarea:focus + label,
