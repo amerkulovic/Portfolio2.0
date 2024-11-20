@@ -14,7 +14,9 @@ const Nav = () => {
         <li className="px-4">
           <a href="#projects">Projects</a>
         </li>
-        <li className="pl-4 mr-10">Contact</li>
+        <li className="pl-4 mr-10">
+          <a href="#contacts">Contact</a>
+        </li>
       </ul>
     </div>
   );
