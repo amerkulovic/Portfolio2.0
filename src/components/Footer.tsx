@@ -10,9 +10,9 @@ const Footer = () => {
         <img src={githubLogo} className="h-12 w-12" />
       </a>
       <ul className="flex items-center font-bold">
-        <li className="px-4">
+        {/* <li className="px-4">
           <a href="#about">About</a>
-        </li>
+        </li> */}
         <li className="px-4">
           <a href="#skills">Skills</a>
         </li>
