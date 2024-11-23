@@ -57,7 +57,7 @@ const Skills = () => {
     setFocusedIndex((prevIndex) => Math.min(prevIndex + 1, displayedSkills.length - 1));
   };
   return (
-    <div id="skills" className="bg-[#6b21a8] flex flex-col items-center relative pb-20">
+    <div id="skills" className="bg-[#6b21a8] flex flex-col items-center relative pb-20 pt-[120px]">
       <h1 className="text-5xl font-bold text-center">Skills</h1>
       <section className="flex p-5 rounded-lg w-fit">
         <button className={`p-5 rounded-l-lg ${selectedSkillset === "front-end" ? "bg-[#30124e]" : "bg-[#4d177a]"}`} value="front-end" onClick={() => handleSkillsetSelection("front-end")}>
