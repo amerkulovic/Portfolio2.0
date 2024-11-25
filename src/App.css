@@ -7,6 +7,7 @@
 
 :root {
   --bg-color: #1c1c1c;
+  --primary-light: #6b21a8;
   --typewriterSpeed: 2.2s;
   --typewriterCharacters: 125;
 }

@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import Card from "./Card";
 
 interface cardObject {
@@ -67,7 +67,7 @@ const Skills = () => {
           Backend
         </button>
       </section>
-      <button onClick={scrollLeft} className="absolute left-2 top-[255px] transform -translate-y-1/2 text-5xl text-white p-2 z-10">
+      <button onClick={scrollLeft} className="absolute left-2 top-[385px] transform -translate-y-1/2 text-5xl text-white p-2 z-10">
         ◀
       </button>
       <div ref={scrollContainerRef} className="w-full overflow-hidden touch-pan-y flex justify-center h-[300px]">
@@ -77,7 +77,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
-      <button onClick={scrollRight} className="absolute right-2 top-[255px] transform -translate-y-1/2 text-5xl text-white p-2 z-10">
+      <button onClick={scrollRight} className="absolute right-2 top-[385px] transform -translate-y-1/2 text-5xl text-white p-2 z-10">
         ▶
       </button>
     </div>
