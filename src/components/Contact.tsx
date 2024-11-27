@@ -1,8 +1,10 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import contactSvg from "../assets/images/contact.svg";
+import Modal from "./Modal";
 
 const Contact = () => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -32,7 +34,10 @@ const Contact = () => {
 
     try {
       const response = await emailjs.send("service_bj8hrq4", "template_f9hhp9b", templateParams, "VakBFA1QLBGZOMeSo");
-      alert("Message sent successfully!");
+      setIsModalVisible(true);
+      setTimeout(() => {
+        setIsModalVisible(false);
+      }, 3000);
       setFormData({
         firstName: "",
         lastName: "",
@@ -48,6 +53,7 @@ const Contact = () => {
 
   return (
     <div id="contacts" className="bg-gradient-to-b from-[#1c1c1c] to-black via-[#1c1c1c] pt-[120px]">
+      {isModalVisible && <Modal />}
       <h1 className="text-5xl font-bold text-center pb-20">Contact</h1>
       <section className="flex justify-around">
         <img className="h-[500px] w-[48%] max-md:hidden" src={contactSvg} />
