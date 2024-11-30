@@ -46,14 +46,13 @@ const Contact = () => {
         message: "",
       });
     } catch (error) {
-      console.error("Failed to send message:", error);
       alert("Failed to send message. Please try again later.");
     }
   };
 
   return (
     <div id="contacts" className="bg-gradient-to-b from-[#1c1c1c] to-black via-[#1c1c1c] pt-[120px]">
-      {isModalVisible && <Modal />}
+      {!isModalVisible && <Modal />}
       <h1 className="text-5xl font-bold text-center pb-20">Contact</h1>
       <section className="flex justify-around">
         <img className="h-[500px] w-[48%] max-md:hidden" src={contactSvg} />
