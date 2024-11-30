@@ -13,8 +13,8 @@ const Card: React.FC<CardProps> = ({ title, description, isFocused, isNearFocus,
 
   return (
     <div className={cardClassNames}>
-      <h1 className={`text-center font-bold${isFocused ? "text-2xl" : ""}`}>{title}</h1>
-      <p className={`${!isFocused ? "hidden" : ""}`}>{description}</p>
+      <h1 className={`text-center font-bold${isFocused ? "font-extrabold text-xl" : ""}`}>{title}</h1>
+      <p className={`${!isFocused ? "hidden" : "mt-5 font-extralight"}`}>{description}</p>
     </div>
   );
 };

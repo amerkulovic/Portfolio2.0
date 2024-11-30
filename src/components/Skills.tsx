@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Card from "./Card";
 
 interface cardObject {
@@ -8,11 +8,11 @@ interface cardObject {
 
 const Skills = () => {
   const frontendSkills: cardObject[] = [
+    { title: "React", description: "A JavaScript library for building user interfaces, React uses a component-based architecture to simplify the development of complex UIs." },
+    { title: "Vue", description: "An approachable front-end framework, Vue makes building UIs simple and is known for its easy-to-understand, component-based approach." },
     { title: "HTML", description: "The standard language for creating web pages, HTML structures content on the web and provides the foundation for building user interfaces." },
     { title: "CSS", description: "A styling language used to define the appearance of web pages, CSS allows you to create responsive, visually appealing layouts." },
     { title: "JavaScript", description: "A versatile scripting language for web development, JavaScript enables dynamic interactions, animations, and complex user interface logic." },
-    { title: "React", description: "A JavaScript library for building user interfaces, React uses a component-based architecture to simplify the development of complex UIs." },
-    { title: "Vue", description: "An approachable front-end framework, Vue makes building UIs simple and is known for its easy-to-understand, component-based approach." },
     { title: "Tailwind", description: "A utility-first CSS framework, TailwindCSS offers low-level styling that allows for rapid and responsive design customization." },
     { title: "TypeScript", description: "A superset of JavaScript that adds static typing, TypeScript helps catch errors at compile time and improves code readability." },
   ];
@@ -30,24 +30,11 @@ const Skills = () => {
 
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [focusedIndex, setFocusedIndex] = useState(0);
-  const cardWidth = 220;
-  const containerWidth = 600;
 
   const handleSkillsetSelection = (value: string) => {
     setSelectedSkillset(value);
     setFocusedIndex(0);
   };
-
-  // useEffect(() => {
-  // Center the focused card
-  // if (scrollContainerRef.current) {
-  //   const container = scrollContainerRef.current;
-  //   const containerWidth = container.clientWidth;
-  //   const cardWidth = 520;
-  //   const scrollOffset = focusedIndex * cardWidth - (containerWidth - cardWidth) / 2;
-  //   container.scrollTo({ left: scrollOffset, behavior: "smooth" });
-  //   }
-  // }, [focusedIndex]);
 
   const scrollLeft = () => {
     setFocusedIndex((prevIndex) => Math.max(prevIndex - 1, 0));
@@ -71,7 +58,7 @@ const Skills = () => {
         ◀
       </button>
       <div ref={scrollContainerRef} className="w-full overflow-hidden touch-pan-y flex justify-center h-[300px]">
-        <div className="inline-flex space-x-4">
+        <div className="flex space-x-4">
           {displayedSkills.map((skill, index) => (
             <Card key={skill.title} title={skill.title} description={skill.description} isFocused={index === focusedIndex} isNearFocus={Math.abs(index - focusedIndex) === 1} isFarFromFocus={Math.abs(index - focusedIndex) > 1} />
           ))}
