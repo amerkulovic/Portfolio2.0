@@ -2,7 +2,7 @@ import photo from "../assets/images/photo.jpg";
 const About = () => {
   return (
     <div
-      className="flex align-middle pt-40 pb-60 bg-gradient-to-b from-[#1c1c1c] to-[#6b21a8] via-[#1c1c1c] 
+      className="flex align-middle pt-40 pb-60 bg-gradient-to-b from-background to-primary via-background 
 "
     >
       <div className="relative">

@@ -4,12 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primaryLight: "var(--primary-light)",
-        darkBlue: "#0A192F",
-        mediumBlue: "#1E3A8A",
-        lightBlue: "#3B82F6",
-        skyBlue: "#93C5FD",
-        mutedBlue: "#E0F2FE",
+        background: "var(--bg-color)",
+        primary: "var(--primary-color)",
+        secondary: "var(--secondary-color)",
+        tertiary: "var(--tertiary-color)",
       },
     },
   },
