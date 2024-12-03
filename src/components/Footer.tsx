@@ -19,10 +19,10 @@ const Footer = () => {
         {/* <li className="px-4">
           <a href="#about">About</a>
         </li> */}
-        <li className="p-4">
+        <li className="py-4">
           <a href="#skills">Skills</a>
         </li>
-        <li className="p-4">
+        <li className="py-4">
           <a href="#projects">Projects</a>
         </li>
         <li className="pt-4">
