@@ -5,9 +5,9 @@ const Nav = () => {
         <span>&lt;</span>Amer <span>/&gt;</span>
       </div>
       <ul className="flex items-center font-bold">
-        {/* <li className="px-4">
+        <li className="px-4">
           <a href="#about">About</a>
-        </li> */}
+        </li>
         <li className="px-4">
           <a href="#skills">Skills</a>
         </li>
