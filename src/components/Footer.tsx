@@ -16,9 +16,9 @@ const Footer = () => {
         </a>
       </section>
       <ul className="flex flex-col w-[33%] items-center font-bold">
-        {/* <li className="px-4">
+        <li className="px-4">
           <a href="#about">About</a>
-        </li> */}
+        </li>
         <li className="py-4">
           <a href="#skills">Skills</a>
         </li>
