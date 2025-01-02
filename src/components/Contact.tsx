@@ -4,7 +4,7 @@ import contactSvg from "../assets/images/contact.svg";
 import Modal from "./Modal";
 
 const Contact = () => {
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
   const [wasSent, setWasSent] = useState<boolean>(false);
   const [formData, setFormData] = useState({
     firstName: "",

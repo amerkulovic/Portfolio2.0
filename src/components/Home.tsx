@@ -1,4 +1,5 @@
 import photo from "../assets/images/photo.jpg";
+import headshot from "../assets/images/AK-Headshot.jpg";
 const About = () => {
   return (
     <div
