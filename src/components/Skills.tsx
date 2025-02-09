@@ -46,7 +46,7 @@ const Skills = () => {
   return (
     <div id="skills" className="bg-primary flex flex-col items-center relative pb-20 pt-[120px]">
       <h1 className="text-5xl font-bold text-center">Skills</h1>
-      <section className="flex p-5 rounded-lg w-fit">
+      <section className="flex p-5 rounded-lg w-fit mb-10">
         <button className={`p-5 font-bold rounded-l-lg ${selectedSkillset === "front-end" ? "bg-tertiary" : "bg-secondary text-black"}`} value="front-end" onClick={() => handleSkillsetSelection("front-end")}>
           Frontend
         </button>
@@ -54,7 +54,7 @@ const Skills = () => {
           Backend
         </button>
       </section>
-      <button onClick={scrollLeft} className="absolute left-2 top-[385px] transform -translate-y-1/2 text-5xl text-white p-2 z-10">
+      {/* <button onClick={scrollLeft} className="absolute left-2 top-[385px] transform -translate-y-1/2 text-5xl text-white p-2 z-10">
         ◀
       </button>
       <div ref={scrollContainerRef} className="w-full overflow-hidden touch-pan-y flex justify-center h-[300px]">
@@ -66,7 +66,15 @@ const Skills = () => {
       </div>
       <button onClick={scrollRight} className="absolute right-2 top-[385px] transform -translate-y-1/2 text-5xl text-white p-2 z-10">
         ▶
-      </button>
+      </button> */}
+      {displayedSkills.map((skill) => (
+        <div className="w-[90%] flex justify-between py-7 my-2 items-center bg-gradient-to-r from-[#1c1c1c] to-primary rounded-xl">
+          <div className="w-[40%] flex justify-center">
+            <h1 className="text-4xl font-bold text-primary">{skill.title}</h1>
+          </div>
+          <p className="w-[50%] text-2xl">{skill.description}</p>
+        </div>
+      ))}
     </div>
   );
 };
