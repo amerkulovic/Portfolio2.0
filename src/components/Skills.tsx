@@ -68,11 +68,11 @@ const Skills = () => {
         ▶
       </button> */}
       {displayedSkills.map((skill) => (
-        <div className="w-[90%] flex justify-between py-7 my-2 items-center bg-gradient-to-r from-[#1c1c1c] to-primary rounded-xl">
+        <div className="w-[90%] flex justify-between py-7 my-2 items-center bg-gradient-to-r from-[#1c1c1c] to-primary rounded-xl max-sm:flex-col max-sm:to-[#1c1c1c]">
           <div className="w-[40%] flex justify-center">
-            <h1 className="text-4xl font-bold text-primary">{skill.title}</h1>
+            <h1 className="text-4xl font-bold text-primary max-sm:mb-5">{skill.title}</h1>
           </div>
-          <p className="w-[50%] text-2xl">{skill.description}</p>
+          <p className="w-[50%] text-2xl max-sm:w-[80%] max-sm:text-center">{skill.description}</p>
         </div>
       ))}
     </div>
