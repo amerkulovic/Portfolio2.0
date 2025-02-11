@@ -7,7 +7,7 @@ interface ProjectProps {
   githubLink: string;
   websiteLink: string;
 }
-const Project : React.FC<ProjectProps> = ({ title, image, githubLink, websiteLink }: ProjectProps) => {
+const Project: React.FC<ProjectProps> = ({ title, image, githubLink, websiteLink }: ProjectProps) => {
   return (
     <div>
       <div className="container inline-block">

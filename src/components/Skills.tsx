@@ -1,5 +1,4 @@
-import { useRef, useState, useEffect } from "react";
-import Card from "./Card";
+import { useRef, useState } from "react";
 
 interface cardObject {
   title: string;
@@ -68,7 +67,7 @@ const Skills = () => {
         ▶
       </button> */}
       {displayedSkills.map((skill) => (
-        <div className="w-[90%] flex justify-between py-7 my-2 items-center bg-gradient-to-r from-[#1c1c1c] to-primary rounded-xl max-sm:flex-col max-sm:to-[#1c1c1c]">
+        <div data-aos="fade-left" data-aos-duration="600" className="w-[90%] flex justify-between py-7 my-2 items-center bg-gradient-to-r from-[#1c1c1c] to-primary rounded-xl max-sm:flex-col max-sm:to-[#1c1c1c]">
           <div className="w-[40%] flex justify-center">
             <h1 className="text-4xl font-bold text-primary max-sm:mb-5">{skill.title}</h1>
           </div>
