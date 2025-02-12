@@ -14,7 +14,7 @@ AOS.init();
 
 function App() {
   return (
-    <>
+    <div className="overflow-hidden">
       <Nav />
       <Home />
       <AboutPage />
@@ -22,7 +22,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 }
 
