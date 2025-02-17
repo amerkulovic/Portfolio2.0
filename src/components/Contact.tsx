@@ -54,7 +54,6 @@ const Contact = () => {
         setIsModalVisible(false);
         setWasSent(false);
       }, 3000);
-      console.log("Something went wrong :(");
     }
   };
 
