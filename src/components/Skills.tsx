@@ -53,19 +53,6 @@ const Skills = () => {
           Backend
         </button>
       </section>
-      {/* <button onClick={scrollLeft} className="absolute left-2 top-[385px] transform -translate-y-1/2 text-5xl text-white p-2 z-10">
-        ◀
-      </button>
-      <div ref={scrollContainerRef} className="w-full overflow-hidden touch-pan-y flex justify-center h-[300px]">
-        <div className="flex space-x-4">
-          {displayedSkills.map((skill, index) => (
-            <Card key={skill.title} title={skill.title} description={skill.description} isFocused={index === focusedIndex} isNearFocus={Math.abs(index - focusedIndex) === 1} isFarFromFocus={Math.abs(index - focusedIndex) > 1} />
-          ))}
-        </div>
-      </div>
-      <button onClick={scrollRight} className="absolute right-2 top-[385px] transform -translate-y-1/2 text-5xl text-white p-2 z-10">
-        ▶
-      </button> */}
       {displayedSkills.map((skill) => (
         <div data-aos="fade-left" data-aos-duration="600" className="w-[90%] flex justify-between py-7 my-2 items-center bg-gradient-to-r from-[#1c1c1c] to-primary rounded-xl max-sm:flex-col max-sm:to-[#1c1c1c]">
           <div className="w-[40%] flex justify-center">
