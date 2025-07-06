@@ -27,7 +27,7 @@ const Skills = () => {
   const [selectedSkillset, setSelectedSkillset] = useState<string>("front-end");
   const displayedSkills = selectedSkillset === "front-end" ? frontendSkills : backendSkills;
 
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  // const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [focusedIndex, setFocusedIndex] = useState(0);
 
   const handleSkillsetSelection = (value: string) => {
