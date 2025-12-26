@@ -1,5 +1,6 @@
 const AboutPage = () => {
   return (
+    // About page describing a brief summary of myself
     <div id="about" className="bg-primary flex flex-col items-center pt-[120px] pb-40">
       <h1 className="text-5xl font-bold text-center pb-20">About</h1>
       <p className="text-2xl text-start w-3/4">
